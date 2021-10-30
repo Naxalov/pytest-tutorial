@@ -17,4 +17,6 @@ jobs:
           python-version: "3.9"
 
       - name: Run tests
-        run: pytest test_func.py -v
+        run: |
+          pip install pytest
+          pytest test_func.py -v
