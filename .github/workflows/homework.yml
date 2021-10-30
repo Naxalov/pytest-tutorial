@@ -7,12 +7,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
+
       # Checkout the repository
       - name: Checkout the repository
         uses: actions/checkout@v2
         with:
           repository: codeschooluz/Python101-HW-TEST
+          path: main_test
       - name: Install dependencies
         uses: actions/setup-python@v2
         with:
@@ -20,6 +21,6 @@ jobs:
 
       - name: Run tests
         run: |
-          pip install pytest
+          # pip install pytest
           ls 
-          python -m pytest Python101-HW-TEST/test_func.py -v
+          # python -m pytest Python101-HW-TEST/test_func.py -v
