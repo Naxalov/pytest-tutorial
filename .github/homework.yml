@@ -1,0 +1,20 @@
+# github action for python
+name: Function homework 
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Checkout the repository
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+        with:
+          repository: codeschooluz/Python101-HW-TEST
+      - name: Install dependencies
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+
+      - name: Run tests
+        run: pytest test_func.py -v
