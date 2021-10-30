@@ -19,4 +19,5 @@ jobs:
       - name: Run tests
         run: |
           pip install pytest
+          mv Python101-HW-TEST/test_func.py .
           pytest test_func.py -v
