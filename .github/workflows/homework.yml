@@ -19,8 +19,13 @@ jobs:
         with:
           python-version: "3.9"
 
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        with:
+          files: artifacts/**/*.xml
+
       - name: Run tests
         run: |
           pip install pytest
           ls 
-          python -m pytest main_test/test_func.py -v
+          python -m pytest main_test/test_func.py --junit-xml pytest.xml
