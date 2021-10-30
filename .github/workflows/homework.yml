@@ -24,9 +24,9 @@ jobs:
           pip install pytest
           ls 
           python -m pytest main_test/test_func.py --junit-xml pytest.xml
-          
+
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1
         with:
-          files: artifacts/**/*.xml
+          files: *.xml
 
