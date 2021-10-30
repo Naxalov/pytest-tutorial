@@ -19,5 +19,5 @@ jobs:
       - name: Run tests
         run: |
           pip install pytest
-          
-          pytest .
+          ls 
+          python -m pytest Python101-HW-TEST/test_func.py -v
